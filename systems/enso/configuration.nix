@@ -21,6 +21,7 @@
   # Configure network proxy if necessary
   # networking.proxy.default = "http://user:password@proxy:port/";
   # networking.proxy.noProxy = "127.0.0.1,localhost,internal.domain";
+  # "Advanced" flake shit
   nix.settings.experimental-features = "nix-command flakes";
   
   # Enable networking
@@ -104,6 +105,7 @@
   wget
   git
   rsync
+  ripgrep
   ];
 
   # Some programs need SUID wrappers, can be configured further or are

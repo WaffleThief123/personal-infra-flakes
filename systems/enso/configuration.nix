@@ -8,6 +8,7 @@
   imports =
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
+      ./zsh.nix
     ];
 
   # Bootloader.
@@ -83,6 +84,7 @@
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.cyra = {
+    shell = pkgs.zsh;
     isNormalUser = true;
     description = "Cyra Westmere";
     extraGroups = [ "networkmanager" "wheel" ];
